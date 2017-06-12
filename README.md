@@ -28,7 +28,7 @@ You need to configure two things before running the source code:
 The matconvnet library can be downloaded at http://www.vlfeat.org/matconvnet/
 
 2- You must download the dataset used. We used the dataset from the following website http://dismac.dii.unipg.it/mm/ver_2_0/index.html. 
-Please create a subfolder called DATASET in the AUX folder and paste the folders 00..10 from this dataset there.
+Please paste the folders 00..90 from this dataset in the AUX_FOLDER/DATASET folder.
 
 If you have any questions about the source code, don't hesitate to contact me. My e-mail is anselmo.ferreira@gmail.com
 

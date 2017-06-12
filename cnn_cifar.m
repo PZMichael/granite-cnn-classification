@@ -1,7 +1,11 @@
 function [net,info,imdb] = cnn_cifar(train_file, validation_train_file, test_file, validation_test_file,varargin)
 %CNN_MNIST  Demonstrates MatConvNet on MNIST
 
+<<<<<<< HEAD
 run('/home/anselmo/matconvnet-master-beta23/matlab/vl_setupnn.m') ;
+=======
+run('where_your_matconvnet_library_is_installed/matlab/vl_setupnn.m') ;
+>>>>>>> 15f08c38390abab6cd1d513ffdd1115f54c55bb7
 
 opts.modelType = 'lenet' ;
 [opts, varargin] = vl_argparse(opts, varargin) ;

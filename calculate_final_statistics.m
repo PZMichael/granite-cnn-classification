@@ -6,7 +6,11 @@ function [accuracy,precision_vector,recall_vector,f_measure_vector]=calculate_fi
 	total_matrix=sum(confusion(:));
 	total_diagonal=0;
 	
+<<<<<<< HEAD
 	for j=1:size(matrix,1)
+=======
+	for j=1:size(confusion,1)
+>>>>>>> 15f08c38390abab6cd1d513ffdd1115f54c55bb7
 		
 		total_diagonal=total_diagonal+confusion(j,j);
 	end

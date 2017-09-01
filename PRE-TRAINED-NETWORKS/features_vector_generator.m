@@ -78,8 +78,8 @@ test_filename = vertcat(test_filename,textscan(fileTestValidation,'%s'));
         	count_valid_frames=0;
 
         	for j=1:size(frames,1)*size(frames,2)
-	       		%Here we limit the number of blocks for testing images to be 500 to make 1NN classifier testing faster        
-	       		if (size(frames{j},1)==32) && (size(frames{j},2)==32) && (count_valid_frames<=500)
+	       		%There is no blocks number limit for testing images
+	       		if (size(frames{j},1)==32) && (size(frames{j},2)==32)
 				im_temp=bsxfun(@minus, double(frames{j}), reshape(mean_image,[32,32,3]));
 				res_test=vl_simplenn(net,single(im_temp))';
 				features_test=vertcat(features_test,horzcat(class,squeeze(res_test(12).x)'));
@@ -98,8 +98,8 @@ test_filename = vertcat(test_filename,textscan(fileTestValidation,'%s'));
         	count_valid_frames=0;
 
         	for j=1:size(frames,1)*size(frames,2)
-	       		%Here we limit the number of blocks for testing images to be 500 to make 1NN classifier testing faster        
-	       		if (size(frames{j},1)==32) && (size(frames{j},2)==32) && (count_valid_frames<=500)
+	       		%There is no blocks number limit for testing images
+	       		if (size(frames{j},1)==32) && (size(frames{j},2)==32) 
 				im_temp=bsxfun(@minus, double(frames{j}), reshape(mean_image,[32,32,3]));
 				res_test=vl_simplenn(net,single(im_temp))';
 				features_test=vertcat(features_test,horzcat(class,squeeze(res_test(12).x)'));
@@ -111,6 +111,5 @@ train_data=features_train(2:end,:);
 test_data=features_test(2:end,:);
 disp(size(train_data));
 disp(size(test_data));
-
 fclose(fileTest);
 fclose(fileTestValidation);

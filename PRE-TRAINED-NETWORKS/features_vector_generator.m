@@ -112,3 +112,5 @@ test_data=features_test(2:end,:);
 disp(size(train_data));
 disp(size(test_data));
 
+fclose(fileTest);
+fclose(fileTestValidation);

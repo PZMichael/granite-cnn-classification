@@ -1,10 +1,7 @@
 function [acc,precision_vector,recall_vector,fmeasure_vector]=train_test(train_file,test_file, folder,set_training,set_testing)
 
-<<<<<<< HEAD
-	system(['mkdir ' num2str(folder) '-' num2str(set_training) ]);
-=======
 	system(['mkdir data/' num2str(folder) '-' num2str(set_training) ]);
->>>>>>> 15f08c38390abab6cd1d513ffdd1115f54c55bb7
+
 	train_data=dlmread(train_file);
 	test_data=dlmread(test_file);
 
@@ -40,18 +37,13 @@ function [acc,precision_vector,recall_vector,fmeasure_vector]=train_test(train_f
 		
 	num_blocks_per_image=ones(1,500)*2116;
                  
-	output2=voting_rf(output,num_blocks_per_image);
-	ground_truth=voting_rf(test_class,num_blocks_per_image);
+	output2=voting(output,num_blocks_per_image);
+	ground_truth=voting(test_class,num_blocks_per_image);
 
-<<<<<<< HEAD
 	[acc,precision_vector,recall_vector,fmeasure_vector]=calculate_final_statistics(output2', ground_truth', [num2str(folder) '-' num2str(set_training) '-confusion_matrix.txt']);
-=======
-	[acc,precision_vector,recall_vector,fmeasure_vector]=calculate_final_statistics(output2', ground_truth', ['data/' num2str(folder) '-' num2str(set_training) '-confusion_matrix.txt']);
->>>>>>> 15f08c38390abab6cd1d513ffdd1115f54c55bb7
-
+	
 	disp(['Accuracy after majority voting of image blocks:' num2str(acc) '%']);
 
-	
 	clearvars B temp
 
 	

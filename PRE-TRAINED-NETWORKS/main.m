@@ -1,6 +1,5 @@
 function [acc,precision,recall,fmeasure]= main(folder,set_training,set_testing)
 
-
 	train_file=['../AUX_FOLDER/5X2_DATA/' num2str(folder) '/split' num2str(set_training) '.txt'];
 	validation_train_file=['../AUX_FOLDER/5X2_DATA/' num2str(folder) '/split' num2str(set_training) '-validation.txt'];
 	

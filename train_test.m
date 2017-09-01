@@ -34,7 +34,8 @@ function [acc,precision_vector,recall_vector,fmeasure_vector]=train_test(train_f
 	temp=predict(B,chunk);
 	output=vertcat(output,temp);
 	output=output(2:end);
-		
+	%there are 2116 valid blocks on images, we are limiting 500 blocks only for training images to make 1-NN classifier training faster.
+	%For testing images, we use all the 2116 32x32 valid blocks	
 	num_blocks_per_image=ones(1,500)*2116;
                  
 	output2=voting(output,num_blocks_per_image);

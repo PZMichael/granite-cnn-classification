@@ -1,35 +1,18 @@
 # granite-cnn-classification
 
-This is the source code related to the paper "Convolutional Neural Network approaches to granite tiles classification" published by Expert Systems and Applications.
+This folder has a code that basically does the same thing of the code present on the root folder. However, here the models are loaded (there is no CNN training from scratch like what the code in root folder does). This can save you memory, but will spend a higher running time.
 
-If you use this code in your research please don't forget to cite our paper:
+The code does the following:
+1. Load CNN model and mean value of training CNN tiles
+2. for each training and testing image do
+  2.1 subdivide it into 32x32 blocks
+  3. For each block do
+    3.1 subtract it from the mean block present in CNN training
+    3.2 apply the resulting block in the CNN, extracting 64-D vectors
+4. if training, train a 1-nn classifier with all vectors from training images. 
+5. If testing, classify its blocks feature vectors and perform a majority voting on blocks classification to decide image's class. 
 
-Anselmo Ferreira, Gilson Giraldi. Convolutional Neural Network approaches to granite tiles classification. 
-Expert Systems with Applications, Volume 84, 30 October 2017, Pages 1-11.
+Please let me know if you have problems with data or code. My contacts are: anselmo.ferreira@gmail.com or anselmo@szu.edu.cn
 
-In bibtex you can use 
-
-@article{Ferreira20171,
-title = "Convolutional Neural Network approaches to granite tiles classification ",
-journal = "Expert Systems with Applications",
-volume = "84",
-pages = "1 - 11",
-year = "2017"
-}
-
-basically, what you need to do is running demo_cifar.m and see the magic happening. In this code we perform a 5x2 cross validation experiment to 
-validate our algorithm. The CIFAR-based CNN is firstly trained by recognizing 32x32 granite blocks from training data and then it is used as feature extractor 
-to train and test a 1NN classifier. For each experiment, we use 500 images from 25 granite classes to train the classifier and the remaining
-images to test the classifier. The images classification is performed after majority voting of their small blocks classification. The metrics reported are metrics calculated after 10 rounds of experiments.
-
-You need to configure two things before running the source code:
-
-1- You need to install matconvnet. After installed you must change line 4 of cnn_cifar.m, informing where your compiled matconvnet library is. 
-The matconvnet library can be downloaded at http://www.vlfeat.org/matconvnet/
-
-2- You must download the dataset used. We used the dataset from the following website http://dismac.dii.unipg.it/mm/ver_2_0/index.html. 
-Please create a subfolder called DATASET in the AUX folder and paste the folders 00..10 from this dataset there.
-
-If you have any questions about the source code, don't hesitate to contact me. My e-mail is anselmo.ferreira@gmail.com
 
 Have fun!

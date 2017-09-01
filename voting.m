@@ -1,4 +1,4 @@
-function classes_final=voting_rf(PrtsAttrib,num_char_per_document_test)
+function classes_final=voting(PrtsAttrib,num_char_per_document_test)
 
 classes_final=zeros(1, size(num_char_per_document_test,2));
 index=1;

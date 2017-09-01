@@ -1,4 +1,4 @@
-# granite-cnn-classification
+# granite-cnn-classification with pre-trained networks
 
 This folder has a code that basically does the same thing of the code present on the root folder. However, here the models are loaded (there is no CNN training from scratch like what the code in root folder does). This can save you memory, but will spend a higher running time.
 

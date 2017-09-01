@@ -30,7 +30,7 @@ The matconvnet library can be downloaded at http://www.vlfeat.org/matconvnet/
 2- You must download the dataset used. We used the dataset from the following website http://dismac.dii.unipg.it/mm/ver_2_0/index.html. 
 Please paste the folders 00..90 from this dataset in the AUX_FOLDER/DATASET folder.
 
-P.S: I created a folder called PRE-TRAINED_NETWORKS, which code loads pre-trained CNNs, extracts feature vectors and classifies them. The only difference there is that there are no trainings from scratch. The CNN models are already saved.
+P.S: I created a folder called PRE-TRAINED-NETWORKS, which code loads pre-trained CNNs, extracts feature vectors and classifies them. The only difference there is that there are no trainings from scratch. The CNN models are already saved.
 
 If you have any questions about the source code, don't hesitate to contact me. My e-mail is anselmo.ferreira@gmail.com
 

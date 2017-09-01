@@ -113,9 +113,6 @@ for i=1:size(test_filename{2}(:),1)
     			x2(:,:,3,index_images_test)=im_temp(:,:,3);
         		y2(index_images_test)=class;
 			index_images_test=index_images_test+1;
-            	        count_valid_frames=count_valid_frames+1;
-
-
 		end
         end
 		

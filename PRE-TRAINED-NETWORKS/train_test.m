@@ -35,7 +35,7 @@ function [acc,precision_vector,recall_vector,fmeasure_vector]=train_test(train_f
 	output=vertcat(output,temp);
 	output=output(2:end);
 		
-	num_blocks_per_image=ones(1,8)*2116;  
+	num_blocks_per_image=ones(1,500)*2116;  
                  
 	output2=voting(output,num_blocks_per_image);
 	ground_truth=voting(test_class,num_blocks_per_image);

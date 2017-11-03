@@ -1,3 +1,5 @@
+%You must change this path to where your MATCONVNET installation is
+%run('/home/anselmo/Desktop/matconvnet-1.0-beta23/matlab/vl_setupnn.m') ;
 disp('Starting Experiments...');
 
 [acc1,precision1,recall1,fmeasure1]=main(1,1,2);
@@ -16,4 +18,3 @@ disp(['Mean Accuracy: ' num2str(mean(horzcat(acc1,acc2,acc3,acc4,acc5,acc6,acc7,
 disp(['Mean Precisiom: ' num2str(mean(horzcat(precision1,precision2,precision3,precision4,precision5,precision6,precision7,precision8,precision9,precision10)))]);
 disp(['Mean Recall: ' num2str(mean(horzcat(recall1,recall2,recall3,recall4,recall5,recall6,recall7,recall8,recall9,recall10)))]);
 disp(['Mean F-Measure: ' num2str(mean(horzcat(fmeasure1,fmeasure2,fmeasure3,fmeasure4,fmeasure5,fmeasure6,fmeasure7,fmeasure8,fmeasure9,fmeasure10)))]);
-
